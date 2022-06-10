@@ -13,6 +13,10 @@ export class CartService {
     this.items.push(product);
   }
 
+  removeItem(index: number) {
+    this.items.splice(index, 1);
+  }
+
   getItems() {
     return this.items;
   };
