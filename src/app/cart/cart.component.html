@@ -9,3 +9,27 @@
     <span>{{ item.price | currency }}</span>
     <button type="button" (click)="removeItem(i)">Remove</button>
 </div>
+
+<form
+    [formGroup]="checkoutForm"
+    (ngSubmit)="onSubmit()"
+    *ngIf="items.length > 0; else hideContent">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+        <label for="address">Address</label>
+        <input id="address" type="text" formControlName="address">
+    </div>
+
+    <button class="button" type="submit" >Purchase</button>
+</form>
+
+<ng-template #hideContent>
+    <div>
+        <span style="color: red;">Cart Empty</span>
+    </div>
+</ng-template>
+
