@@ -6,10 +6,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href=/angular-test/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve": "ng serve"
   },
   "private": true,
   "dependencies": {
